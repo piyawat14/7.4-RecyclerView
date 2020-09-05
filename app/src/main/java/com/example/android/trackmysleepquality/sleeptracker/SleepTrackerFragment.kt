@@ -83,7 +83,7 @@ class SleepTrackerFragment : Fragment() {
             }
         })
 
-        sleepTrackerViewModel.navigateToSleepDetail.observe(viewLifecycleOwner, Observer { night ->
+        sleepTrackerViewModel.navigateToSleepDetail.observe(this, Observer { night ->
             night?.let {
                 this.findNavController().navigate(
                         SleepTrackerFragmentDirections
